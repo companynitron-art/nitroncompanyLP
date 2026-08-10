@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2.5">
             <img
-              src="/nitron_logo.png"
+              src="/ChatGPT_Image_10_de_ago._de_2026,_16_19_02%20copy%20copy.png"
               alt="Nitron AI"
               className="w-7 h-7 object-contain drop-shadow-[0_0_10px_rgba(255,26,26,0.3)]"
             />

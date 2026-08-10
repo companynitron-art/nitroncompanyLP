@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Check, Rocket, Play } from 'lucide-react';
 
 const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Nitron%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20solu%C3%A7%C3%A3o.';
+const CHECKOUT_LINK = 'https://app.bolten.io/enrollment/new?product=a1882684-bdbc-4402-9d6d-29064174beb7';
 
 const INDICATORS = [
   'Atendimento imediato',
@@ -153,7 +154,7 @@ export default function Hero() {
               className="mb-10"
             >
               <motion.img
-                src="/nitron_logo.png"
+                src="/ChatGPT_Image_10_de_ago._de_2026,_16_19_02%20copy%20copy.png"
                 alt="Nitron AI"
                 className="w-20 h-20 object-contain drop-shadow-[0_0_40px_rgba(255,26,26,0.3)]"
                 animate={{ scale: [1, 1.015, 1] }}
@@ -191,9 +192,11 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12"
             >
               <motion.a
-                href="#checkout"
+                href={CHECKOUT_LINK}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-[14px]"
               >
                 <Rocket size={16} />

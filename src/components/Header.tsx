@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const CHECKOUT_LINK = '#checkout';
+const CHECKOUT_LINK = 'https://app.bolten.io/enrollment/new?product=a1882684-bdbc-4402-9d6d-29064174beb7';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +30,7 @@ export default function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <motion.img
-              src="/nitron_logo.png"
+              src="/ChatGPT_Image_10_de_ago._de_2026,_16_19_02%20copy%20copy.png"
               alt="Nitron AI"
               className="w-9 h-9 object-contain drop-shadow-[0_0_16px_rgba(255,26,26,0.3)]"
               whileHover={{ scale: 1.03, filter: 'drop-shadow(0 0 24px rgba(255,26,26,0.5))' }}
@@ -43,6 +43,8 @@ export default function Header() {
           <div className="hidden md:block">
             <motion.a
               href={CHECKOUT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="btn-primary inline-flex items-center px-5 py-2.5 rounded-full text-white text-[13px] font-semibold"
@@ -74,6 +76,8 @@ export default function Header() {
             <div className="px-5 py-6">
               <a
                 href={CHECKOUT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-5 py-3 rounded-full btn-primary text-white font-semibold text-[14px]"
               >

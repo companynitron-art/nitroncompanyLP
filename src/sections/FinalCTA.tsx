@@ -3,6 +3,7 @@ import { Rocket } from 'lucide-react';
 import SectionReveal from '../components/SectionReveal';
 
 const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Nitron%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20solu%C3%A7%C3%A3o.';
+const CHECKOUT_LINK = 'https://app.bolten.io/enrollment/new?product=a1882684-bdbc-4402-9d6d-29064174beb7';
 
 export default function FinalCTA() {
   return (
@@ -23,7 +24,9 @@ export default function FinalCTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
-                href="#checkout"
+                href={CHECKOUT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="btn-primary inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-full text-white font-semibold text-[15px] animate-breathe"
