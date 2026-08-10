@@ -32,7 +32,7 @@ export default function Video() {
 
         <div className="grid lg:grid-cols-5 gap-10 items-center">
           <SectionReveal className="lg:col-span-3">
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.04] bg-[#0A0A0A] group">
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.06] bg-[#0A0A0A] group shadow-[0_0_80px_-20px_rgba(255,26,26,0.12)]">
               {!playing ? (
                 <>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] to-black" />
@@ -41,7 +41,8 @@ export default function Video() {
                       onClick={() => setPlaying(true)}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      className="relative w-20 h-20 rounded-full bg-gradient-to-br from-nitron-red to-red-700 flex items-center justify-center shadow-[0_0_60px_rgba(255,26,26,0.3)]"
+                      className="relative w-20 h-20 rounded-full flex items-center justify-center shadow-[0_0_60px_rgba(255,26,26,0.3)]"
+                    style={{ background: '#FF1A1A' }}
                     >
                       <Play size={28} fill="white" className="text-white ml-1" />
                     </motion.button>

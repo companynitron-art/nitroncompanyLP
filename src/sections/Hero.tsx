@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Check, Rocket, Play } from 'lucide-react';
 
-const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20da%20Nitron%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o.';
+const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Nitron%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20solu%C3%A7%C3%A3o.';
 
 const INDICATORS = [
   'Atendimento imediato',
@@ -22,14 +22,14 @@ function PhoneMockup() {
     <motion.div
       animate={{ y: [0, -14, 0] }}
       transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-      className="relative"
+      className="relative [perspective:1200px]"
     >
       {/* Glow */}
       <div className="absolute -inset-24 bg-[#ff1a1a]/[0.04] rounded-full blur-[120px] animate-pulse-glow" />
 
       {/* Phone */}
-      <div className="relative w-[280px] sm:w-[320px] mx-auto">
-        <div className="bg-[#0a0a0a] rounded-[2.6rem] p-2.5 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)] border border-white/[0.06]">
+      <div className="relative w-[280px] sm:w-[320px] mx-auto rotate-[7deg] hover:rotate-[4deg] transition-transform duration-700">
+        <div className="relative bg-[#080808] rounded-[2.8rem] p-2 shadow-[0_42px_110px_-20px_rgba(0,0,0,0.95),0_0_36px_rgba(255,26,26,0.08)] border border-white/[0.1] before:absolute before:inset-[3px] before:rounded-[2.6rem] before:border before:border-white/[0.04] before:pointer-events-none">
           <div className="bg-[#0B141A] rounded-[2.1rem] overflow-hidden">
             {/* Notch */}
             <div className="relative flex justify-center pt-2 pb-1">
@@ -191,18 +191,18 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12"
             >
               <motion.a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#checkout"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="btn-primary inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-[14px]"
               >
                 <Rocket size={16} />
-                Quero automatizar meu atendimento
+                Quero começar agora
               </motion.a>
               <motion.a
-                href="#demo"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-[14px] transition-all duration-400"
@@ -212,7 +212,7 @@ export default function Hero() {
                 }}
               >
                 <Play size={16} fill="currentColor" className="text-[#ff1a1a]" />
-                Ver demonstração
+                Quero tirar minhas dúvidas
               </motion.a>
             </motion.div>
 

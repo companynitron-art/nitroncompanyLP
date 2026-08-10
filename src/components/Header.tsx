@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Nitron%20AI%20e%20quero%20conhecer%20a%20plataforma.';
+const CHECKOUT_LINK = '#checkout';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,14 +42,12 @@ export default function Header() {
           {/* Desktop button */}
           <div className="hidden md:block">
             <motion.a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={CHECKOUT_LINK}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="btn-primary inline-flex items-center px-5 py-2.5 rounded-full text-white text-[13px] font-semibold"
             >
-              Agendar demonstração
+              Quero começar agora
             </motion.a>
           </div>
 
@@ -75,13 +73,11 @@ export default function Header() {
           >
             <div className="px-5 py-6">
               <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={CHECKOUT_LINK}
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-5 py-3 rounded-full btn-primary text-white font-semibold text-[14px]"
               >
-                Agendar demonstração
+                Quero começar agora
               </a>
             </div>
           </motion.div>

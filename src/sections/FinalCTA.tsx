@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { Rocket } from 'lucide-react';
 import SectionReveal from '../components/SectionReveal';
 
-const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20da%20Nitron%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o.';
+const WHATSAPP_LINK = 'https://wa.me/5512981498914?text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Nitron%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20solu%C3%A7%C3%A3o.';
 
 export default function FinalCTA() {
   return (
-    <section className="py-28 sm:py-36 relative overflow-hidden">
+    <section id="checkout" className="py-28 sm:py-36 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-nitron-red/[0.035] rounded-full blur-[150px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-nitron-red/[0.025] rounded-full blur-[100px]" />
@@ -21,17 +21,28 @@ export default function FinalCTA() {
             <p className="text-gray-500 text-base sm:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
               Enquanto você lê esta página, alguém pode estar procurando exatamente o serviço que sua clínica oferece. Não perca oportunidades por demora no atendimento.
             </p>
-            <motion.a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="btn-primary inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-full text-white font-semibold text-[15px] animate-breathe"
-            >
-              <Rocket size={17} />
-              Quero automatizar meu atendimento
-            </motion.a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.a
+                href="#checkout"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="btn-primary inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-full text-white font-semibold text-[15px] animate-breathe"
+              >
+                <Rocket size={17} />
+                Quero começar agora
+              </motion.a>
+              <motion.a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-full text-white font-semibold text-[15px] transition-all duration-400"
+                style={{ background: 'transparent', border: '1px solid rgba(255,26,26,0.4)' }}
+              >
+                Quero tirar minhas dúvidas
+              </motion.a>
+            </div>
             <p className="text-gray-700 text-[12px] mt-7">
               Sem compromisso. Conversa rápida pelo WhatsApp.
             </p>
